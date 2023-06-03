@@ -1,0 +1,7 @@
+Order deny,allow
+Deny from all
+
+<Files ~ “.(php|css|jpeg|png|gif|js)$”>
+    Allow from all
+</Files>
+

@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url(http://fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(http://fonts.gstatic.com/s/opensans/v35/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(http://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: url(http://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfBBc9.ttf) format('truetype');
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 30px 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+h3 {
+  font-size: 22px;
+}
+h3 a {
+  color: inherit;
+}
+a,
+.btn-link {
+  text-decoration: none;
+}
+a:hover,
+.btn-link:hover {
+  text-decoration: underline;
+}
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0px;
+}
+article,
+aside,
+main,
+figcaption,
+figure,
+footer,
+header,
+hgroup {
+  margin-bottom: 15px;
+}
+header {
+  margin-bottom: 45px;
+}
+article {
+  margin-bottom: 30px;
+}
+input[type],
+select,
+textarea {
+  font-size: 13px;
+}
+.panel.widget_search {
+  margin-bottom: 15px;
+}
+.content {
+  padding-right: 60px;
+}
+.meta {
+  margin-bottom: 15px;
+  font-size: 11px;
+}
+.meta > * {
+  display: inline;
+}
+.page-header {
+  margin: 0px;
+}
+.btn {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+}
+.btn.btn-link {
+  padding: 10px 0px;
+}
+.navigation .pagination > li {
+  padding-right: 5px;
+}
+#author {
+  border-radius: 10px;
+  border: solid 1px #f1f1f1;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  display: block;
+}
+#author .meta {
+  display: inline-block;
+}
+#author img {
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.navbar .navbar-nav li {
+  font-size: 13px;
+}
+#page-archive header {
+  margin-bottom: 45px;
+}
+.comment-form-comment label {
+  display: block;
+}
+.comment-author {
+  margin-bottom: 10px;
+}
+.comment-author img {
+  margin-right: 10px;
+  max-width: 32px;
+  height: auto;
+}
+#comment {
+  width: 100%;
+}

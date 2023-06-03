@@ -1,0 +1,16 @@
+.postbox .form-table th {
+    width: 20%;
+}
+
+    .postbox .form-table th label {
+        font-size: 13px;
+        padding: 0 2% 0 0;
+    }
+
+.postbox .form-table tr:not(:last-child) {
+    border-bottom: solid 1px #ddd; 
+}
+
+.postbox .form-table td {
+    padding: 1.8em 0;
+}
