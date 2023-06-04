@@ -7,7 +7,7 @@
      *
      */
     function Yonk_admin_scripts() {
-        wp_enqueue_style('yonk-admin-css', get_template_directory_uri() . '/css/custom-admin.css');
+        wp_enqueue_style('yonk-admin-css', get_stylesheet_directory_uri() . '/css/custom-admin.css');
     }
 
     add_action('admin_enqueue_scripts', 'Yonk_admin_scripts');
@@ -19,7 +19,7 @@
      * @return void
      */
     function Yonk_login_css() {
-        wp_enqueue_style('yonk-login-css', get_template_directory_uri() . '/css/custom-login.css', false);
+        wp_enqueue_style('yonk-login-css', get_stylesheet_directory_uri() . '/css/custom-login.css', false);
     }
 
     add_action('login_enqueue_scripts', 'Yonk_login_css', 10);
@@ -127,10 +127,12 @@
      */
     function Yonk_remove_tools() {
         remove_menu_page('tools.php');
+        remove_submenu_page('options-general.php', 'options-writing.php');
+        remove_submenu_page('cptui_main_menu', 'cptui_main_menu');
+        remove_submenu_page('cptui_main_menu', 'cptui_support');
     }
 
-    add_action('admin_menu', 'Yonk_remove_tools', 99);
+    add_action('admin_menu', 'Yonk_remove_tools', 999);
 
     /* Capable to use shortcodes to Widget Text */
     add_filter('widget_text', 'do_shortcode');
-

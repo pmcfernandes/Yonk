@@ -30,11 +30,11 @@
     function Yonk_register_styles() {
         wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '5.3.0');
         wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.2.0');
-        wp_register_style('site_style', get_template_directory_uri() . '/css/site.css', array(), '1.2.0');
+        wp_register_style('style_Yonk', get_template_directory_uri() . '/css/site.css', array(), '1.2.0');
 
         wp_enqueue_style('bootstrap');
         wp_enqueue_style('style');
-        wp_enqueue_style('site_style');
+        wp_enqueue_style('style_Yonk');
     }
 
     add_action('wp_enqueue_scripts', 'Yonk_register_styles', 0);

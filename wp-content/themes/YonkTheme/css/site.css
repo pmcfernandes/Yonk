@@ -111,17 +111,17 @@ textarea {
 .navigation .pagination > li {
   padding-right: 5px;
 }
-#author {
+#authorBox {
   border-radius: 10px;
   border: solid 1px #f1f1f1;
   padding: 10px 15px;
   margin-bottom: 30px;
   display: block;
 }
-#author .meta {
+#authorBox .meta {
   display: inline-block;
 }
-#author img {
+#authorBox img {
   border-radius: 10px;
   margin-right: 15px;
 }
@@ -131,7 +131,10 @@ textarea {
 #page-archive header {
   margin-bottom: 45px;
 }
-.comment-form-comment label {
+.comment-form-comment label,
+.comment-form-author label,
+.comment-form-email label,
+.comment-form-url label {
   display: block;
 }
 .comment-author {
@@ -142,6 +145,9 @@ textarea {
   max-width: 32px;
   height: auto;
 }
+#author,
+#email,
+#url,
 #comment {
   width: 100%;
 }

@@ -1,3 +1,11 @@
+.acf-admin-toolbar, #acf-field-group-pro-features {
+    display: none !important;
+}
+
+.wdspromos {
+    display: none !important;
+}
+
 .postbox .form-table th {
     width: 20%;
 }

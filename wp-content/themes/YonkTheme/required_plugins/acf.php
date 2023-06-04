@@ -14,5 +14,9 @@
     }
 
     add_filter('acf/settings/url', 'my_acf_settings_url');
-    add_filter('acf/settings/show_admin', '__return_false');
+
+    if ( !current_user_can('administrator') ) {
+        add_filter('acf/settings/show_admin', '__return_false');
+    }
+    
     add_filter('acf/settings/show_updates', '__return_false', 100);

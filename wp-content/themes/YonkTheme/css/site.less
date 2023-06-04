@@ -89,7 +89,7 @@ input[type], select, textarea {
     }
 }
 
-#author {
+#authorBox {
     border-radius: 10px;
     border: solid 1px #f1f1f1;
     padding: 10px 15px;
@@ -120,7 +120,7 @@ input[type], select, textarea {
     }
 }
 
-.comment-form-comment {
+.comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url {
     & label {
         display: block;
     }
@@ -136,6 +136,22 @@ input[type], select, textarea {
     }
 }
 
-#comment {
+#author, #email, #url, #comment {
     width: 100%;
+}
+
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+
+}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { 
+    
 }
