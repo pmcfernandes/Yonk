@@ -7,6 +7,8 @@
     require_once 'libs/optimizations.php';
     require_once 'libs/admin.php';
     require_once 'libs/functions.php';
+    require_once 'libs/customizer.php';
+    require_once 'libs/tinymce_editor.php';
 
     function Yonk_register_required_plugins() {
         /*

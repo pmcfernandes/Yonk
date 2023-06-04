@@ -1,5 +1,5 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
-<?php
+<?php defined('ABSPATH') or die('No script kiddies please!'); 
+
 /**
  * The Header for our theme.
  * Displays all of the head section and everything up till.
@@ -8,6 +8,8 @@
  * @subpackage YonkTheme
  * @since 1.0
  */
+
+    extract(get_option('Yonk_theme_options'))
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
@@ -26,7 +28,7 @@
 <body <?php body_class(); ?>>
     <?php do_action('Yonk_body_start'); ?>
     <div id="wrapper" class="container-fluid">
-        <div class="container">
+        <div class="<?php echo $container; ?>">
             <?php do_action('Yonk_header_before'); ?>
             <header id="header" role="banner">
                 <div class="row">

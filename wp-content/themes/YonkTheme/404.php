@@ -1,4 +1,5 @@
 <?php defined('ABSPATH') or die('No script kiddies please!'); 
+
 /**
  * The template for displaying 404 page.
  *

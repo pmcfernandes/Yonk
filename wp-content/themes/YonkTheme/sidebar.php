@@ -1,4 +1,14 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
+<?php
+defined('ABSPATH') or die('No script kiddies please!');
+
+/**
+ * The sidebar containing the main widget area
+ *
+ * @package WordPress
+ * @subpackage YonkTheme
+ * @since 1.0
+ */
+?>
 <?php if (is_active_sidebar('single')): ?>
 	<?php dynamic_sidebar('single'); ?>
 <?php else: ?>

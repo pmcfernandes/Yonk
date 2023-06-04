@@ -1,5 +1,5 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
-<?php
+<?php defined('ABSPATH') or die('No script kiddies please!'); 
+
 /**
  * The template for displaying the footer.
  * Contains footer content and the closing of the #main and #page div elements.

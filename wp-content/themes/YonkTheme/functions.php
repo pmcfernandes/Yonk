@@ -162,15 +162,3 @@
 
     add_action('init', 'stop_heartbeat', 1);
 
-    /**
-     * Add new features to customizer
-     * Hook into the 'customize_register' action
-     *
-     * @param [type] $wp_customize
-     * @return void
-     */
-    function Yonk_theme_customizer($wp_customize) {
-
-    }
-
-    add_action('customize_register', 'Yonk_theme_customizer');

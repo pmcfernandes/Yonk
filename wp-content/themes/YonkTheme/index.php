@@ -1,4 +1,19 @@
-<?php defined('ABSPATH') or die('No script kiddies please!');?>
+<?php defined('ABSPATH') or die('No script kiddies please!');
+
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage YonkTheme
+ * @since 1.0
+*/
+?>
 <?php get_header(); ?>
 <!-- Customize this page like you want -->
 <div class="row">

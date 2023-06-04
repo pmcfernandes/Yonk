@@ -8,6 +8,7 @@ defined('ABSPATH') or die('No script kiddies please!');
  * @subpackage YonkTheme
  * @since 1.0
  */
+
 get_header(); ?>
 <div class="row">
 	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content">

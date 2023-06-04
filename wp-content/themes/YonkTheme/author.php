@@ -1,4 +1,16 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
+<?php defined('ABSPATH') or die('No script kiddies please!'); 
+
+/**
+ * The template for displaying the author pages
+ * 
+ * If you'd like to further customize these archive views, you may create a new template file for each specific one.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage YonkTheme
+ * @since 1.0
+ */
+?>
 <?php do_action('Yonk_author_before'); ?>
 <section id="authorBox" itemscope itemtype="http://schema.org/Person">
     <div class="row">
