@@ -3,9 +3,14 @@ Theme for Wordpress
  
 This is not a theme for production. This is used for development of new themes. You can create your scratch themes for here.
 
+First time install run in command line inside theme
+ 
+    npm run build
+
 This theme is using the following components:
 
 - Bootstrap 5.3 (updatable)
+- Fontawesome 4.7
 - Elementor
 - Classic editor
 - Classic widgets
