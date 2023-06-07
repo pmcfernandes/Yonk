@@ -1,0 +1,19 @@
+{
+    "name": "pmcfe/yonk-theme",
+    "description": "Base wordpress theme for development. This theme can be used to create a new theme for wordpress.",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Pedro Fernandes",
+            "email": "hello@impedro.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

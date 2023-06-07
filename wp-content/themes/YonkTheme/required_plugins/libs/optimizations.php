@@ -3,6 +3,8 @@
 
     /**
      * Optimize and remove some head actions
+     * 
+     * @return void
      */
     function Yonk_head_cleanup() {
         remove_action('wp_head', 'rsd_link');
@@ -56,6 +58,8 @@
     /**
      * Register Theme Features
      * Hook into the 'after_setup_theme' action
+     * 
+     * @return void
      */
     function Yonk_theme_features() {
         // Add theme support for HTML5 Semantic Markup
@@ -81,6 +85,8 @@
     /**
      * Sanitize filename on Upload to remove spaces or acents
      * Hook into the 'sanitize_file_name' filter
+     * 
+     * @return void
      */
     function Yonk_sanitize_filename_on_upload($filename) {
         $array = explode('.', $filename);
@@ -95,5 +101,18 @@
 
     /**
      * Remove WordPress from RSS feeds
+     * 
+     * @return void
      */
     add_filter('the_generator', '__return_false');
+
+    /**
+     *
+     * Don't return the default description in the RSS feed if it hasn't been changed
+     */
+    function Yonk_remove_default_bloginfo($bloginfo) {
+        $defaultTagline = 'Just another WordPress site';
+        return ($bloginfo === $defaultTagline) ? '' : $bloginfo;
+    }
+
+    add_filter('get_bloginfo_rss', 'Yonk_remove_default_bloginfo');

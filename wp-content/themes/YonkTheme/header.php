@@ -22,7 +22,7 @@
         <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
     	<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/apple-touch-icon.png">
 
-        <!-- WP headers -->
+        <!-- WP headers --> 
         <?php wp_head(); ?>
 	</head>
 <body <?php body_class(); ?>>
@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3">
                         <a href="<?php echo site_url() ?>">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" class="logo" alt="<?php wp_title('|', true, 'right'); ?>" />
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo.png" class="logo" alt="<?php wp_title('|', true, 'right'); ?>" />
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-7 col-md-9 col-lg-9 text-right">

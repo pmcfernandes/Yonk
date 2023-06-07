@@ -1,6 +1,12 @@
 <?php defined('ABSPATH') or die('No script kiddies please!'); ?>
 <?php
 
+    /**
+     * Register custom customizer properties
+     * 
+     * @param object $wp_customizer
+     * @return void
+     */
     function theme_customize_register( $wp_customize ) {
 
         $wp_customize->add_section('Yonk_theme_options', array(
@@ -27,7 +33,6 @@
 				'container-fluid' => __( 'Full width container', 'blank' ),
             ),
         ));
-    
       
     }
 

@@ -4,8 +4,8 @@
     /**
      * Load template
      *
-     * @param [type] $template_name
-     * @param [type] $part_name
+     * @param string $template_name
+     * @param string $part_name
      * @return void|string
      */
     function load_template_part($template_name, $part_name = null) {
