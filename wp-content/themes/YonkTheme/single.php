@@ -15,7 +15,17 @@ get_header(); ?>
         <?php
             if (have_posts()):
                 while (have_posts()): the_post();
-                    get_template_part('template-parts/content');
+                    if (post_password_required()):
+                        get_template_part('template-parts/content-password-protected');
+                    else:
+                        get_template_part('template-parts/content');
+                    endif;
+
+                    the_post_navigation(array(
+                        'prev_text'			 => __('prev post: %title'),
+                        'next_text'			 => __('next post: %title'),
+                        'screen_reader_text' => __('Continue Reading'),
+                    ));
                     comments_template('', true);
                 endwhile;
             else:

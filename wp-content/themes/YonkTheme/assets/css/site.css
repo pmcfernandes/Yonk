@@ -151,3 +151,27 @@ textarea {
 #comment {
   width: 100%;
 }
+.post-password-form label {
+  display: block;
+  margin-bottom: 15px;
+}
+#pwbox-1168 {
+  display: block;
+}
+.post-navigation {
+  border-radius: 10px;
+  border: solid 1px #f1f1f1;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  display: block;
+}
+.post-navigation .nav-links {
+  display: flex;
+}
+.post-navigation .nav-links > .nav-previous,
+.post-navigation .nav-links > .nav-next {
+  width: 50%;
+}
+.post-navigation .nav-links > .nav-next {
+  text-align: right;
+}

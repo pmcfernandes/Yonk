@@ -16,7 +16,11 @@
             </div>
         <?php endif; ?>
         <div class="col-xs-12 col-sm-<?php echo (has_post_thumbnail() ? "8": "12"); ?> col-md-<?php echo (has_post_thumbnail() ? "8": "12"); ?> col-lg-<?php echo (has_post_thumbnail() ? "9": "12"); ?>">
-            <div itemprop="headline"><?php the_excerpt(); ?></div>
+            <div itemprop="headline"><?php the_excerpt(); ?></div>            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
             <a href="<?php the_permalink(); ?>" class="btn btn-link" itemprop="url">
                 <?php echo _e('Read more', 'blank'); ?>
             </a>

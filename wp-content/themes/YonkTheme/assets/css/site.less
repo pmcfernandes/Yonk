@@ -140,6 +140,37 @@ input[type], select, textarea {
     width: 100%;
 }
 
+.post-password-form {
+    & label {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+#pwbox-1168 {
+    display: block;
+}
+
+.post-navigation {
+    border-radius: 10px;
+    border: solid 1px #f1f1f1;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    display: block;
+
+    & .nav-links {
+        display: flex;
+
+        & > .nav-previous, & > .nav-next {
+            width: 50%;
+        }
+
+        & > .nav-next {
+            text-align: right;
+        }
+    }
+}
+
 
 // `md` applies to small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) { 
