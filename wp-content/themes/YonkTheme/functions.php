@@ -4,6 +4,7 @@
     
     require_once dirname(__FILE__) . '/required_plugins/index.php';
     require_once dirname(__FILE__) . '/vendor/autoload.php';
+    require_once dirname(__FILE__) . '/shortcodes/qrcode.php';
 
     /**
      * Register custom scripts in frontend
@@ -54,7 +55,6 @@
     }
 
     add_action('init', 'Yonk_nav_menus');
-
     
     /**
      * Register sidebars for home, pages and posts
@@ -143,23 +143,10 @@
      * @return void
      */
     function Yonk_load_theme_textdomain() {
-        load_theme_textdomain('blank', get_stylesheet_directory() . '/languages');
+        
+        load_theme_textdomain('blank', get_template_directory() . '/languages');
+        load_child_theme_textdomain('YonkTheme', get_stylesheet_directory() . '/languages');
+
     }
     
     add_action('after_setup_theme', 'Yonk_load_theme_textdomain');
-
-    /**
-     * Disable Heartbeat
-     *
-     * @return void
-     */
-    function stop_heartbeat() {
-        if (get_option('disable_heartbeat') !== null) {
-            if (get_option('disable_heartbeat') == 'true') {
-                wp_deregister_script('heartbeat');
-            }
-        }
-    }
-
-    add_action('init', 'stop_heartbeat', 1);
-

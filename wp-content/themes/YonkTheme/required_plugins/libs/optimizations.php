@@ -120,3 +120,35 @@
     }
 
     add_filter('get_bloginfo_rss', 'Yonk_remove_default_bloginfo');
+
+    /**
+     * Change language based on lang query string
+     * 
+     * @param string $local language
+     * @return string
+     */
+    function Yonk_theme_localized($locale) {
+        if (isset($_GET['lang'])) {
+            return sanitize_key($_GET['lang']);
+        }
+
+        return $locale;
+    }
+
+    add_filter('locale', 'Yonk_theme_localized');
+
+    /**
+     * Disable Heartbeat
+     *
+     * @return void
+     */
+    function stop_heartbeat() {
+        if (get_option('disable_heartbeat') !== null) {
+            if (get_option('disable_heartbeat') == 'true') {
+                wp_deregister_script('heartbeat');
+            }
+        }
+    }
+
+    add_action('init', 'stop_heartbeat', 1);
+
