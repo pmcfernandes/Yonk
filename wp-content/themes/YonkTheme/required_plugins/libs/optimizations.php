@@ -142,7 +142,7 @@
      *
      * @return void
      */
-    function stop_heartbeat() {
+    function Yonk_stop_heartbeat() {
         if (get_option('disable_heartbeat') !== null) {
             if (get_option('disable_heartbeat') == 'true') {
                 wp_deregister_script('heartbeat');
@@ -150,5 +150,13 @@
         }
     }
 
-    add_action('init', 'stop_heartbeat', 1);
+    add_action('init', 'Yonk_stop_heartbeat', 1);
 
+
+    /**
+     * Disbale post by email configuration 
+     * because writing menu is disabled by default in admin settings
+     * 
+     * @return boolean false
+     */
+    add_filter('enable_post_by_email_configuration', '__return_false');

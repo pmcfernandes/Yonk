@@ -1,0 +1,6 @@
+node_modules/
+required_plugins/vendor/
+assets/css/all.min.css
+assets/js/all.min.js
+assets/fonts/
+*lock*

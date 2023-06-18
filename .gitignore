@@ -49,11 +49,3 @@ wp-config.php
 # Note: If you wish to whitelist themes,
 # uncomment the next line
 #/wp-content/themes
-
-all.min.*[.css|.js]
-
-/wp-content/themes/YonkTheme/*lock*
-/wp-content/themes/YonkTheme/node_modules/
-/wp-content/themes/YonkTheme/vendor/
-/wp-content/themes/YonkTheme/assets/fonts/*[.eot|.ttf|.svg|.otf|.woff|.woff2]
-

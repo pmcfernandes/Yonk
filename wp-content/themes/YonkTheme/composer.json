@@ -2,16 +2,21 @@
     "name": "pmcfernandes/yonk",
     "description": "Base wordpress theme for development. This theme can be used to create a new theme for wordpress.",
     "type": "wordpress-theme",
+    "license": "MIT",
     "authors": [
         {
             "name": "Pedro Fernandes",
             "email": "hello@impedro.com"
         }
     ],
+    "keywords": [
+        "wordpress"
+    ],
     "require": {
         "php": ">=7.4.0"
     },
     "config": {
+        "vendor-dir": "required_plugins/vendor",
         "allow-plugins": {
             "composer/installers": true
         }

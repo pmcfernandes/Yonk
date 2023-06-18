@@ -11,8 +11,7 @@
  * @subpackage YonkTheme
  * @since 1.0
 */
-?>
-<?php
+
     http_response_code(404);
     die();
 ?>

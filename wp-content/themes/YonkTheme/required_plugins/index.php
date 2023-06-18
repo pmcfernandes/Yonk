@@ -1,7 +1,8 @@
 <?php defined('ABSPATH') or die('No script kiddies please!'); ?>
 <?php
-    require_once 'class-tgm-plugin-activation.php';
+    require_once 'class-tgm-plugin-activation.php';    
     require_once 'acf.php';
+    require_once 'vendor/autoload.php';
     require_once 'libs/navmenu.php';
     require_once 'libs/pagenavi.php';
     require_once 'libs/optimizations.php';
