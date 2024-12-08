@@ -11,12 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "5.3.0",
-    "fontawesome-4.7": "4.7"
+    "fontawesome-4.7": "4.7",
+    "yonktheme": "file:"
   },
   "devDependencies": {
+    "del": "^2.2.2",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.0",
-    "gulp-uglify": "2.0.0",
-    "del": "^2.2.2"
+    "gulp-uglify": "2.0.0"
   }
 }
