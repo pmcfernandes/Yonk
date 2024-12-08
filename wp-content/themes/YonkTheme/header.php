@@ -9,7 +9,11 @@
  * @since 1.0
  */
 
-    extract(get_option('Yonk_theme_options'))
+    $options = get_option('Yonk_theme_options');
+
+    if ($options) {
+        extract($options);
+    }        
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>

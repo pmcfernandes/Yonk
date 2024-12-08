@@ -22,7 +22,7 @@
         }
     }
 
-    add_action('wp_enqueue_scripts', 'Yonk_register_scripts');
+    add_action('wp_enqueue_scripts', 'Yonk_register_scripts', 0);
 
     /**
      * Register custom styles in frontend
@@ -33,7 +33,7 @@
     function Yonk_register_styles() {
         wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/all.min.css', array(), '1.2.0');
         wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.2.0');
-        wp_register_style('style_Yonk', get_template_directory_uri() . '/assets/css/site.css', array(), '1.2.0');
+        wp_register_style('style_Yonk', get_stylesheet_directory_uri() . '/assets/css/site.css', array(), '1.2.0');
 
         wp_enqueue_style('bootstrap');
         wp_enqueue_style('style');

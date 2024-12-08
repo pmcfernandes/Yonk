@@ -45,6 +45,7 @@
 
         if (in_array('current-menu-item', $var))
             $c[] = 'active';
+        
         if (in_array('menu-item-has-children', $var))
             $c[] = 'has-dropdown';
 

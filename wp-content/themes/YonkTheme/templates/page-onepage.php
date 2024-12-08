@@ -16,8 +16,8 @@ get_header();
 
 	if ($query->have_posts()):
 		while($query->have_posts()): $query->the_post();
-			$page = get_post(get_the_ID());
-			$slug = $page->post_name; ?>
+			$pageObj = get_post(get_the_ID());
+			$slug = $pageObj->post_name; ?>
 	<?php do_action('Yonk_page_before', $slug); ?>
         <section id="page-<?php echo $slug; ?>" <?php post_class(); ?> role="section">
             <?php get_template_part('page', $slug); ?>

@@ -22,9 +22,9 @@
             array(
                 'name'               => 'Elementor',
                 'slug'               => 'elementor',
-                'source'             => 'https://downloads.wordpress.org/plugin/elementor.3.9.2.zip',
+                'source'             => 'https://downloads.wordpress.org/plugin/elementor.3.25.10.zip',
                 'required'           => true,
-                'version'            => '3.9.2',
+                'version'            => '3.25.10',
                 'force_activation'   => false,
                 'force_deactivation' => false,
                 'external_url'       => 'https://pt.wordpress.org/plugins/elementor/',
