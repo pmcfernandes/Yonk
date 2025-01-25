@@ -10,7 +10,7 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<?php wp_nav_menu(
 						array(
 							'theme_location' => 'primary',

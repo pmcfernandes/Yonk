@@ -7,6 +7,7 @@
                 unset( $buttons[ $key ] );
             }
         }
+        
         return $buttons;
     }
 

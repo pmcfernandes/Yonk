@@ -13,7 +13,8 @@
         "wordpress"
     ],
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=7.4.0",
+        "tinify/tinify": "^1.6"
     },
     "config": {
         "vendor-dir": "required_plugins/vendor",
