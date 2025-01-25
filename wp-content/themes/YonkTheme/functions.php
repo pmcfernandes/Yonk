@@ -4,8 +4,6 @@
         exit;
     }
 
-    define('DISALLOW_FILE_EDIT', true);
-    
     require_once dirname(__FILE__) . '/required_plugins/index.php';    
     require_once dirname(__FILE__) . '/shortcodes/qrcode.php';
     require_once dirname(__FILE__) . '/inc/custom-fields.php';
@@ -18,7 +16,7 @@
      * @return void
      */
     function Yonk_register_scripts() {
-        wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/all.min.js', array('jquery'), '1.2.0', true);
+        wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/all.min.js', array('jquery'), '5.3.3', true);
         wp_enqueue_script('bootstrap');
 
         if (is_singular()) {
@@ -35,7 +33,7 @@
      * @return void
      */
     function Yonk_register_styles() {
-        wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/all.min.css', array(), '1.2.0');
+        wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/all.min.css', array(), '5.3.3');
         wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.2.0');
         wp_register_style('style_Yonk', get_stylesheet_directory_uri() . '/assets/css/site.css', array(), '1.2.0');
 

@@ -4,6 +4,11 @@
         exit;
     }
 
+    /**
+     * Remove the blockquote button from the TinyMCE editor
+     * 
+     * @param mixed $buttons
+     */
     function Yonk_tinymce_blockquote_button($buttons)
     {
         foreach ($buttons as $key => $button) {
@@ -17,6 +22,11 @@
 
     add_filter('mce_buttons', 'Yonk_tinymce_blockquote_button');
 
+    /**
+     * Restore the justify button in the TinyMCE editor
+     * 
+     * @param mixed $init
+     */
     function Yonk_tinymce_restore_justify_button($init)
     {
         // Add 'justify' to the list of text alignment options
@@ -43,6 +53,12 @@
 
     add_filter('tiny_mce_before_init', 'Yonk_tinymce_restore_justify_button');
 
+    /**
+     * Add the justify button to the TinyMCE editor
+     * 
+     * @param mixed $buttons
+     * @return mixed
+     */
     function Yonk_add_justify_button_to_editor($buttons): mixed
     {
         // Add the justify button if it's not already present

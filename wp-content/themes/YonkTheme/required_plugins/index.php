@@ -7,7 +7,6 @@
     require_once 'vendor/autoload.php';
     require_once 'class-tgm-plugin-activation.php';    
     require_once 'acf.php';
-    require_once 'vendor/autoload.php';
     require_once 'libs/navmenu.php';
     require_once 'libs/pagenavi.php';
     require_once 'libs/optimizations.php';
@@ -18,7 +17,8 @@
     require_once 'libs/image_optimize.php';
     require_once 'libs/elementor.php';
     require_once 'libs/images-lazy-load.php';
-
+    require_once 'libs/security.php';
+    
     function Yonk_register_required_plugins() {
         /*
         * Array of plugin arrays. Required keys are name and slug.
@@ -60,6 +60,18 @@
                 'force_activation'   => false,
                 'force_deactivation' => false,
                 'external_url'       => 'https://pt.wordpress.org/plugins/classic-editor/',
+                'is_callable'        => '',
+            ),
+
+            array(
+                'name'               => 'SMTP Configuration',
+                'slug'               => 'smtp-configuration-master',
+                'source'             =>  get_template_directory_uri() . '/required_plugins/compressed/smtp-configuration-master.zip',
+                'required'           => true,
+                'version'            => '1.0',
+                'force_activation'   => false,
+                'force_deactivation' => false,
+                'external_url'       => get_site_url(),
                 'is_callable'        => '',
             ),
 

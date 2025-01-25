@@ -16,13 +16,7 @@ class Simple_Lazy_Load_Images {
 
     public function enqueue_scripts() {
         // Enqueue the lazy load script
-        wp_enqueue_script(
-            'simple-lazy-load',
-            plugin_dir_url(__FILE__) . 'js/lazy-load.js',
-            array(),
-            '1.0',
-            true
-        );
+        wp_enqueue_script('simple-lazy-load', get_template_directory_uri() . '/assets/js/lazy-load.js', array(), '1.0', true);
     }
 
     public function modify_image_markup($content) {

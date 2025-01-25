@@ -1,39 +1,14 @@
-msgid ""
-msgstr ""
-"Project-Id-Version: Blank\n"
-"POT-Creation-Date: 2021-08-16 00:22+0100\n"
-"PO-Revision-Date: 2021-08-17 00:07+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: pt\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Poedit-SearchPath-0: .\n"
-
-msgid "Search"
-msgstr "Pesquisar"
-
-msgid "Search here"
-msgstr "Pesquise aqui"
-
-msgid "Page not found"
-msgstr "Página não encontrada"
-
-msgid "This is somewhat embarrassing, isn't it"
-msgstr "Isso é um pouco embaraçoso, não é?"
-
-msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "Parece que nada foi encontrado neste local. Talvez tente uma pesquisa?"
-
 msgid "About"
 msgstr "Sobre"
 
+msgid "comments"
+msgstr "comentários"
+
 msgid "Comments are closed."
-msgstr "Comentários estão fechados."
+msgstr "Os comentários estão fechados."
+
+msgid "Reply"
+msgstr "Responder"
 
 msgid "Send"
 msgstr "Enviar"
@@ -41,23 +16,62 @@ msgstr "Enviar"
 msgid "Leave here a comment:"
 msgstr "Deixe aqui um comentário:"
 
+msgid "Navigation menu"
+msgstr "Menu de navegação"
+
+msgid "Footer menu"
+msgstr "Menu do rodapé"
+
+msgid "Home Sidebar"
+msgstr "Barra lateral da página inicial"
+
+msgid "Single Sidebar"
+msgstr "Barra lateral do post único"
+
+msgid "Page Sidebar"
+msgstr "Barra lateral da página"
+
+msgid "Search Sidebar"
+msgstr "Barra lateral de pesquisa"
+
+msgid "Category Sidebar"
+msgstr "Barra lateral da categoria"
+
+msgid "Theme Layout Settings"
+msgstr "Configurações de Layout do Tema"
+
+msgid "Container width and sidebar defaults"
+msgstr "Largura do container e padrões da barra lateral"
+
+msgid "Container Width"
+msgstr "Largura do Container"
+
+msgid "Choose between Bootstrap's container and container-fluid"
+msgstr "Escolha entre o container e o container-fluid do Bootstrap"
+
+msgid "Fixed width container"
+msgstr "Container de largura fixa"
+
+msgid "Full width container"
+msgstr "Container de largura total"
+
+msgid "Search here"
+msgstr "Pesquisar aqui"
+
 msgid "Read more"
-msgstr "Enviar"
+msgstr "Ler mais"
 
 msgid "Nothing Found"
-msgstr "Enviar"
-
-msgid "Reply"
-msgstr "Enviar"
+msgstr "Nenhum item foi encontrado"
 
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "Desculpe, mas nada corresponde aos seus termos de pesquisa. Por favor, tente novamente com algumas palavras-chave diferentes."
+msgstr "Desculpe, mas nada correspondeu aos seus termos de pesquisa. Por favor, tente novamente com palavras-chave diferentes."
 
-msgid "Search for: %s"
-msgstr "Enviar"
+msgid "It seems we can’t find what you’re looking for. Perhaps searching can help."
+msgstr "Parece que não conseguimos encontrar o que você está procurando. Talvez a pesquisa possa ajudar."
 
-msgid "This is a widget ready area. Add some and they will appear here."        
-msgstr "Esta é uma área pronta para widget. Adicione alguns e eles aparecerão aqui."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece aqui</a>."
 
-msgid "comments"
-msgstr "comentários"
+msgid "This is a widget ready area. Add some and they will appear here."
+msgstr "Esta é uma área pronta para widgets. Adicione alguns e eles aparecerão aqui."
