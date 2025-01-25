@@ -1,5 +1,8 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
 <?php
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
 
     require_once 'vendor/autoload.php';
     require_once 'class-tgm-plugin-activation.php';    
@@ -14,6 +17,7 @@
     require_once 'libs/tinymce_editor.php';
     require_once 'libs/image_optimize.php';
     require_once 'libs/elementor.php';
+    require_once 'libs/images-lazy-load.php';
 
     function Yonk_register_required_plugins() {
         /*

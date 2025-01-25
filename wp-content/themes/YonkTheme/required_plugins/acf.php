@@ -1,5 +1,8 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
 <?php
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
 
     define( 'MY_ACF_PATH', get_template_directory() . '/required_plugins/acf/' );
     define( 'MY_ACF_URL', get_template_directory_uri() . '/required_plugins/acf/' );

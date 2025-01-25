@@ -1,5 +1,9 @@
 <?php
-defined('ABSPATH') or die('No script kiddies please!');
+
+if (!defined('ABSPATH')) {
+	exit;
+}
+
 
 /**
  * The sidebar containing the main widget area

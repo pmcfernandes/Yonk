@@ -1,5 +1,8 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
 <?php
+
+	if (!defined('ABSPATH')) {
+		exit;
+	}
 
 	/**
 	 * Class Yonk_Nav_Menu

@@ -1,4 +1,8 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); 
+<?php 
+
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 /**
  * The Header for our theme.

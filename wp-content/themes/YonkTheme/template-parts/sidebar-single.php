@@ -1,8 +1,16 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
-<?php if (is_active_sidebar('single')): ?>
-	<?php dynamic_sidebar('single'); ?>
-<?php else: ?>
+<?php
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
+
+    if (is_active_sidebar('single')):
+        dynamic_sidebar('single');
+    else:
+?>
 	<div class="no-widgets">
 		<p><?php _e('This is a widget ready area. Add some and they will appear here.', 'blank'); ?></p>
 	</div>
-<?php endif; ?>
+<?php 
+	endif; 
+?>

@@ -1,5 +1,8 @@
-<?php
-defined('ABSPATH') or die('No script kiddies please!');
+<?php 
+
+if (!defined('ABSPATH')) {
+    exit;
+}
 
 // Load all PHP classes in custom-types directory
 
@@ -16,6 +19,4 @@ foreach ($files as $file) {
  * Custom functions that act independently of the theme templates
  * Eventually, some of the functionality here could be replaced by core features
  */
-
-
 

@@ -1,7 +1,10 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
-<?php
+<?php 
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
+
     define('DISALLOW_FILE_EDIT', true);
-    define('YOUR_TINYPNG_API_KEY', '');
     
     require_once dirname(__FILE__) . '/required_plugins/index.php';    
     require_once dirname(__FILE__) . '/shortcodes/qrcode.php';

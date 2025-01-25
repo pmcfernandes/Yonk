@@ -1,5 +1,9 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
 <?php
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
+
     function Yonk_numeric_posts_nav() {
 
         if(is_singular())

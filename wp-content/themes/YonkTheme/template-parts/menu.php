@@ -1,4 +1,10 @@
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
+<?php
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
+
+?>
 <?php if (has_nav_menu('primary')): ?>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container-fluid">

@@ -1,4 +1,10 @@
-<?php defined('ABSPATH') or die('No script kiddies please!');?>
+<?php 
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
+
+?>
 <?php if (has_post_thumbnail()): ?>
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom:15px;">

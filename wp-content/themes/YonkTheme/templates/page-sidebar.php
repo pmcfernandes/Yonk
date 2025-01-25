@@ -1,6 +1,12 @@
 <?php /* Template Name: Page with Sidebar (default) */ ?>
-<?php defined('ABSPATH') or die('No script kiddies please!'); ?>
-<?php get_header(); ?>
+<?php
+
+    if (!defined('ABSPATH')) {
+        exit;
+    }
+	
+	get_header(); 
+?>
 <div class="row">
 	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content">
 		<?php
@@ -19,4 +25,7 @@
 		</section>
 	</div>
 </div>
-<?php get_footer(); ?>
+
+<?php 
+	get_footer(); 
+?>

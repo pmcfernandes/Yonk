@@ -1,5 +1,8 @@
 <?php
-defined('ABSPATH') or die('No script kiddies please!');
+
+if (!defined('ABSPATH')) {
+	exit;
+}
 
 /**
  * The template for displaying Comments.
