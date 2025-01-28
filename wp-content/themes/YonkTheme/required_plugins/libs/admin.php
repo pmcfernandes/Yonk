@@ -54,7 +54,7 @@
     /**
      * Remove WordPress logo from admin bar
      * Hook into the 'wp_before_admin_bar_render' action
-     * 
+     *
      * @return void
      */
     function Yonk_adminbar_remove_logo() {
@@ -67,12 +67,12 @@
     /**
      * Change copyright of admin footer
      * Hook into the 'admin_footer_text' action
-     * 
+     *
      * @return void
      */
     function Yonk_change_admin_footer() {
         $theme = wp_get_theme();
-        echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Powered by <a href="' . $theme->get('AuthorURI') . '" target="_blank">' . $theme->get('Author') . '</a></p>';
+        echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Powered by <a href="' . $theme->get('Author URI') . '" target="_blank">' . $theme->get('Author') . '</a></p>';
     }
 
     add_filter('admin_footer_text', 'Yonk_change_admin_footer');
@@ -80,7 +80,7 @@
     /**
      * Remove welcome panel from dashboard
      * Hook into the 'welcome_panel' action
-     * 
+     *
      * @return void
      */
     remove_action('welcome_panel', 'wp_welcome_panel');
@@ -88,7 +88,7 @@
     /**
      * Remove dashboard widgets from WordPress Admin Home Panel
      * Hook into the 'admin_init' action
-     * 
+     *
      * @return void
      */
     function Yonk_remove_dashboard_widgets() {
@@ -110,7 +110,7 @@
 
     /**
      * Add support to new mime types in upload
-     * 
+     *
      * @param array $mimes
      * @return array
      */

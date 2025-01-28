@@ -1,18 +1,19 @@
-<?php 
+<?php
 
     if (!defined('ABSPATH')) {
         exit;
     }
 
-    require_once dirname(__FILE__) . '/required_plugins/index.php';    
+    require_once dirname(__FILE__) . '/required_plugins/index.php';
     require_once dirname(__FILE__) . '/shortcodes/qrcode.php';
+    require_once dirname(__FILE__) . '/shortcodes/search-overlay.php';
     require_once dirname(__FILE__) . '/inc/custom-fields.php';
     require_once dirname(__FILE__) . '/inc/custom-types.php';
 
     /**
      * Register custom scripts in frontend
      * Hook into the 'wp_enqueue_scripts' action
-     * 
+     *
      * @return void
      */
     function Yonk_register_scripts() {
@@ -29,17 +30,19 @@
     /**
      * Register custom styles in frontend
      * Hook into the 'wp_enqueue_scripts' action
-     * 
+     *
      * @return void
      */
     function Yonk_register_styles() {
         wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/all.min.css', array(), '5.3.3');
         wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.2.0');
         wp_register_style('style_Yonk', get_stylesheet_directory_uri() . '/assets/css/site.css', array(), '1.2.0');
+        wp_register_style('search_overlay', get_stylesheet_directory_uri() . '/assets/css/search-overlay.css', array('bootstrap'), '1.2.0');
 
         wp_enqueue_style('bootstrap');
         wp_enqueue_style('style');
         wp_enqueue_style('style_Yonk');
+        wp_enqueue_style('search_overlay');
     }
 
     add_action('wp_enqueue_scripts', 'Yonk_register_styles', 0);
@@ -47,7 +50,7 @@
     /**
      * Register two navigation menus, cam register more, just put that on array.
      * Hook into the 'init' action
-     * 
+     *
      * @return void
      */
     function Yonk_nav_menus() {
@@ -58,11 +61,11 @@
     }
 
     add_action('init', 'Yonk_nav_menus');
-    
+
     /**
      * Register sidebars for home, pages and posts
      * Hook into the 'widgets_init' action
-     * 
+     *
      * @return void
      */
     function Yonk_register_siderbar() {
@@ -114,7 +117,7 @@
 
     add_action('widgets_init', 'Yonk_register_siderbar');
 
-    
+
     /**
      * Call template for category specified single
      * Hook into the 'single_template' action
@@ -142,14 +145,14 @@
 
     /**
      * Load languages from child theme instead of the default
-     * 
+     *
      * @return void
      */
     function Yonk_load_theme_textdomain() {
-        
+
         load_theme_textdomain('blank', get_template_directory() . '/languages');
         load_child_theme_textdomain('YonkTheme', get_stylesheet_directory() . '/languages');
 
     }
-    
+
     add_action('after_setup_theme', 'Yonk_load_theme_textdomain');

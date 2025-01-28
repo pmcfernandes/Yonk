@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if (!defined('ABSPATH')) {
     exit;
@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
 
 /**
  * The template for displaying the author pages
- * 
+ *
  * If you'd like to further customize these archive views, you may create a new template file for each specific one.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -14,8 +14,13 @@ if (!defined('ABSPATH')) {
  * @subpackage YonkTheme
  * @since 1.0
  */
+
+    if (ot_get_option('disable_author', true))
+        return;
+
+    do_action('Yonk_author_before');
 ?>
-<?php do_action('Yonk_author_before'); ?>
+
 <section id="authorBox" itemscope itemtype="http://schema.org/Person">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -27,4 +32,6 @@ if (!defined('ABSPATH')) {
         </div>
     </div>
 </section>
-<?php do_action('Yonk_author_after'); ?>
+<?php
+    do_action('Yonk_author_after');
+?>

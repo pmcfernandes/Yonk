@@ -1,10 +1,11 @@
-<?php 
+<?php
 
     if (!defined('ABSPATH')) {
         exit;
     }
 
-    get_header(); 
+    get_header();
+    
 ?>
 <div class="row">
 	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 content">
@@ -31,6 +32,6 @@
 		</section>
 	</div>
 </div>
-<?php 
-    get_footer(); 
+<?php
+    get_footer();
 ?>

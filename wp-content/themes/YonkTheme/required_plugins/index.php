@@ -5,8 +5,10 @@
     }
 
     require_once 'vendor/autoload.php';
-    require_once 'class-tgm-plugin-activation.php';    
+    require_once 'class-tgm-plugin-activation.php';
     require_once 'acf.php';
+    require_once 'option-tree.php';
+    require_once 'theme-options.php';
     require_once 'libs/navmenu.php';
     require_once 'libs/pagenavi.php';
     require_once 'libs/optimizations.php';
@@ -18,7 +20,10 @@
     require_once 'libs/elementor.php';
     require_once 'libs/images-lazy-load.php';
     require_once 'libs/security.php';
-    
+
+    require_once 'elementor/farmacias-control/elementor-farmacias-control.php';
+    require_once 'elementor/meteorologia-control/elementor-meteorologia-control.php';
+
     function Yonk_register_required_plugins() {
         /*
         * Array of plugin arrays. Required keys are name and slug.

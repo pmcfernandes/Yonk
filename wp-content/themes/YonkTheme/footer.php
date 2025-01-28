@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if (!defined('ABSPATH')) {
 	exit;
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
             <?php do_action('Yonk_content_after'); ?>
             <footer id="footer">
                 <div id="inner-footer">
-
+                    <?php do_action('Yonk_inner_footer'); ?>
                 </div>
                 <p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
             </footer>

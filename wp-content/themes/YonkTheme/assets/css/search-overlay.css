@@ -1,0 +1,12 @@
+.search-overlay {
+  width: 100% !important;
+  border-right: none !important;
+}
+.search-overlay .offcanvas-title {
+  display: none;
+}
+.search-overlay .search-overlay-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
