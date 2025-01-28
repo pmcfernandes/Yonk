@@ -82,3 +82,19 @@ function Yonk_theme_options()
 
 
 add_action('init', 'Yonk_theme_options', 1);
+
+/**
+ * Add Google Maps api key to Elementor
+ *
+ * @return void
+ */
+function Yonk_elementor_google_maps_api_key()
+{
+    $key = ot_get_option('google_api_key', '');
+
+    if (!empty($key)) {
+        update_option('elementor_google_maps_api_key', $key);
+    }
+}
+
+add_action('init', 'Yonk_elementor_google_maps_api_key');
