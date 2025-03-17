@@ -16,8 +16,8 @@ function Yonk_theme_options()
         'sections' => array(
             array(
                 'id' => 'general',
-                'title' => 'General'
-            )
+                'title' => __('General', 'blank'),
+            ),
         ),
         'settings' => array(
             array(
@@ -52,6 +52,25 @@ function Yonk_theme_options()
                 'label' => __('Disable Comments', 'blank'),
                 'desc' => '',
                 'std' => true,
+                'type' => 'radio',
+                'section' => 'general',
+                'class' => '',
+                'choices' => array(
+                    array(
+                        'value' => true,
+                        'label' => 'Yes'
+                    ),
+                    array(
+                        'value' => false,
+                        'label' => 'No'
+                    )
+                )
+            ),
+            array(
+                'id' => 'enable_lazy_load_images',
+                'label' => __('Enable Lazy Load Images', 'blank'),
+                'desc' => '',
+                'std' => false,
                 'type' => 'radio',
                 'section' => 'general',
                 'class' => '',

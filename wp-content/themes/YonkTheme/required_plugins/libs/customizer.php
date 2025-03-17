@@ -10,7 +10,7 @@
      * @param object $wp_customizer
      * @return void
      */
-    function theme_customize_register( $wp_customize ) {
+    function theme_customize_register($wp_customize) {
 
         $wp_customize->add_section('Yonk_theme_options', array(
             'title'    => __( 'Theme Layout Settings', 'blank' ),
@@ -39,6 +39,6 @@
       
     }
 
-    add_action( 'customize_register', 'theme_customize_register' );
+    add_action('customize_register', 'theme_customize_register');
 
 

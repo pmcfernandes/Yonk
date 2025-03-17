@@ -107,7 +107,6 @@
 
     add_action('admin_init', 'Yonk_remove_dashboard_widgets');
 
-
     /**
      * Add support to new mime types in upload
      *
@@ -115,9 +114,11 @@
      * @return array
      */
     function Yonk_mime_types($mimes) {
-        $mimes['svg']  = 'image/svg+xml';
-        $mimes['svgz'] = 'image/svg+xml';
-        return $mimes;
+        $m = array();
+        $m['svg'] = 'image/svg+xml';
+        $m['svgz'] = 'image/svg+xml';
+        $m = array_merge($mimes, $m);
+        return $m;
     }
 
     add_filter('upload_mimes', 'Yonk_mime_types');

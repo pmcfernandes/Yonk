@@ -5,11 +5,11 @@ var gulp = require('gulp');
 
 var config = {
     js: [
-        'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
     ],
     css: [        
-        'node_modules/bootstrap/dist/css/bootstrap.css',
-        'node_modules/fontawesome-4.7/css/font-awesome.css',
+        'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        'node_modules/fontawesome-4.7/css/font-awesome.min.css',
     ],
     fonts: [
         'node_modules/fontawesome-4.7/fonts/FontAwesome.otf',

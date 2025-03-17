@@ -17,8 +17,8 @@
     require_once 'libs/customizer.php';
     require_once 'libs/tinymce_editor.php';
     require_once 'libs/image_optimize.php';
-    require_once 'libs/elementor.php';
     require_once 'libs/images-lazy-load.php';
+    require_once 'libs/elementor.php';
     require_once 'libs/security.php';
 
     require_once 'elementor/farmacias-control/elementor-farmacias-control.php';
@@ -70,10 +70,10 @@
 
             array(
                 'name'               => 'SMTP Configuration',
-                'slug'               => 'smtp-configuration-master',
+                'slug'               => 'smtp-configuration',
                 'source'             =>  get_template_directory_uri() . '/required_plugins/compressed/smtp-configuration-master.zip',
                 'required'           => true,
-                'version'            => '1.0',
+                'version'            => '1.0.0',
                 'force_activation'   => false,
                 'force_deactivation' => false,
                 'external_url'       => get_site_url(),

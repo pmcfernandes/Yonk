@@ -63,6 +63,12 @@ class Simple_Lazy_Load_Images {
     }
 }
 
-// Initialize the plugin
-new Simple_Lazy_Load_Images();
+add_action('init', function () {
+    
+    if (ot_get_option('enable_lazy_load_images', false) == true) {
+        new Simple_Lazy_Load_Images();
+    }
+    
+});
+
 

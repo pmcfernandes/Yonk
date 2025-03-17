@@ -4,73 +4,30 @@
         exit;
     }
 
-    /**
-     * Remove the blockquote button from the TinyMCE editor
-     * 
-     * @param mixed $buttons
-     */
-    function Yonk_tinymce_blockquote_button($buttons)
-    {
-        foreach ($buttons as $key => $button) {
-            if ('blockquote' === $button) {
-                unset($buttons[$key]);
+    function Yonk_tinymce_add_buttons() {
+        add_filter( 'mce_buttons', 'Yonk_tinymce_justify_button', 5 );
+    }
+
+    add_action( 'admin_init', 'Yonk_tinymce_add_buttons' );
+
+    function Yonk_tinymce_justify_button( $buttons_array ) {
+
+        foreach ($buttons_array as $key => $button) {
+            if ('blockquote' === $key) {
+                unset($buttons_array[$key]);
             }
         }
 
-        return $buttons;
+        if ( ! in_array( 'alignjustify', $buttons_array ) && in_array( 'alignright', $buttons_array ) ) {
+            $key      = array_search( 'alignright', $buttons_array );
+            $inserted = array( 'alignjustify' );
+            array_splice( $buttons_array, $key + 1, 0, $inserted );
+        }
+
+        if ( ! in_array( 'underline', $buttons_array ) ) {
+            $inserted = array( 'underline' );
+            array_splice( $buttons_array, 0, 0, $inserted );
+        }
+
+        return $buttons_array;
     }
-
-    add_filter('mce_buttons', 'Yonk_tinymce_blockquote_button');
-
-    /**
-     * Restore the justify button in the TinyMCE editor
-     * 
-     * @param mixed $init
-     */
-    function Yonk_tinymce_restore_justify_button($init)
-    {
-        // Add 'justify' to the list of text alignment options
-        if (isset($init['toolbar1']) && strpos($init['toolbar1'], 'alignleft') !== false) {
-            $init['toolbar1'] = str_replace('alignright', 'alignright alignjustify', $init['toolbar1']);
-        }
-
-        // Add justify to the list of valid elements if it's not already there
-        if (!isset($init['extended_valid_elements']) || strpos($init['extended_valid_elements'], 'justify') === false) {
-            $init['extended_valid_elements'] = isset($init['extended_valid_elements'])
-                ? $init['extended_valid_elements'] . ',p[style],span[style]'
-                : 'p[style],span[style]';
-        }
-
-        // Enable the justify button in TinyMCE
-        if (!isset($init['align_formats'])) {
-            $init['align_formats'] = 'Align left=alignleft;Align center=aligncenter;Align right=alignright;Justify=justifyfull';
-        } elseif (strpos($init['align_formats'], 'justifyfull') === false) {
-            $init['align_formats'] .= ';Justify=justifyfull';
-        }
-
-        return $init;
-    }
-
-    add_filter('tiny_mce_before_init', 'Yonk_tinymce_restore_justify_button');
-
-    /**
-     * Add the justify button to the TinyMCE editor
-     * 
-     * @param mixed $buttons
-     * @return mixed
-     */
-    function Yonk_add_justify_button_to_editor($buttons): mixed
-    {
-        // Add the justify button if it's not already present
-        if (!in_array('alignjustify', $buttons)) {
-            $pos = array_search('alignright', $buttons);
-            if ($pos !== false) {
-                array_splice($buttons, $pos + 1, 0, 'alignjustify');
-            } else {
-                $buttons[] = 'alignjustify';
-            }
-        }
-        return $buttons;
-    }
-
-    add_filter('mce_buttons', 'Yonk_add_justify_button_to_editor');
