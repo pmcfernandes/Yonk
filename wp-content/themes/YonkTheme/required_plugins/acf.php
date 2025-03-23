@@ -5,7 +5,7 @@
     }
 
     define('MY_ACF_PATH', trailingslashit(get_template_directory()) . 'required_plugins/acf/');
-    define('MY_ACF_URL', (get_template_directory_uri()) . 'required_plugins/acf/');
+    define('MY_ACF_URL', (get_template_directory_uri()) . '/required_plugins/acf/');
 
     /**
      * Required: include ACF.
@@ -46,7 +46,7 @@
      * @return void
      */
     function my_acf_init() {
-        $key = ot_get_option('google_api_key', '');
+        $key = ot_get_option('google_api_key', GOOGLE_MAPS_API_KEY);
 
         if (!empty($key)) {
             acf_update_setting('google_api_key', $key);
