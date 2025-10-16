@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 if (!defined('ABSPATH')) {
     exit;
@@ -7,7 +7,14 @@ if (!defined('ABSPATH')) {
 // Load all PHP classes in custom-types directory
 
 $dir = get_stylesheet_directory() . DIRECTORY_SEPARATOR . 'custom-types';
+if (!is_dir($dir) || !is_readable($dir)) {
+    return;
+}
+
 $files = scandir($dir);
+if ($files === false) {
+    return;
+}
 
 foreach ($files as $file) {
     if (pathinfo($file, PATHINFO_EXTENSION) === 'php') {
