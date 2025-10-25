@@ -71,9 +71,9 @@
             array(
                 'name'               => 'SMTP Configuration',
                 'slug'               => 'smtp-configuration',
-                'source'             =>  get_template_directory_uri() . '/required_plugins/compressed/smtp-configuration-master.zip',
+                'source'             =>  get_template_directory_uri() . '/required_plugins/compressed/smtp-configuration-master.2.0.1.zip',
                 'required'           => true,
-                'version'            => '1.0.0',
+                'version'            => '2.0.1',
                 'force_activation'   => false,
                 'force_deactivation' => false,
                 'external_url'       => get_site_url(),

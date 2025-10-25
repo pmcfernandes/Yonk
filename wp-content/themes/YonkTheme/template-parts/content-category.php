@@ -11,7 +11,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h3 itemprop="name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <div class="meta">
-                <p class="date" itemprop="datePublished"><?php the_date(); ?></p>
+                <p class="date" itemprop="datePublished"><?php esc_html_e(get_the_date()); ?></p>
                 <div class="category_name" itemprop="genre"><?php the_category(', '); ?></div>
             </div>
         </div>
@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-12">
             <a href="<?php the_permalink(); ?>" class="btn btn-link" itemprop="url">
-                <?php echo _e('Read more', 'blank'); ?>
+                <?php esc_html_e('Read more', 'blank'); ?>
             </a>
         </div>
     </div>

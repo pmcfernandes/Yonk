@@ -72,7 +72,7 @@
      */
     function Yonk_change_admin_footer() {
         $theme = wp_get_theme();
-        echo 'Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Powered by <a href="' . $theme->get('Author URI') . '" target="_blank">' . $theme->get('Author') . '</a></p>';
+        echo 'Fueled by <a href="http://www.wordpress.org" target="_blank" rel="noopener noreferrer">WordPress</a> | Powered by <a href="' . $theme->get('AuthorURI') . '" target="_blank" rel="noopener noreferrer">' . $theme->get('Author') . '</a></p>';
     }
 
     add_filter('admin_footer_text', 'Yonk_change_admin_footer');

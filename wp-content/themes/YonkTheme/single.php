@@ -25,9 +25,9 @@ get_header(); ?>
                     endif;
 
                     the_post_navigation(array(
-                        'prev_text'			 => __('prev post: %title'),
-                        'next_text'			 => __('next post: %title'),
-                        'screen_reader_text' => __('Continue Reading'),
+                        'prev_text'			 => __('prev post: %title', 'blank'),
+                        'next_text'			 => __('next post: %title', 'blank'),
+                        'screen_reader_text' => __('Continue Reading', 'blank'),
                     ));
                     comments_template('', true);
                 endwhile;

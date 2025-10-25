@@ -12,7 +12,7 @@
                 <h1 itemprop="name"><?php the_title(); ?></h1>
             </header>
             <div class="meta">
-                <p class="date" itemprop="datePublished"><?php the_date(); ?></p>
+                <p class="date" itemprop="datePublished"><?php esc_html_e(get_the_date()); ?></p>
                 <div class="category_name" itemprop="genre"><?php the_category(', '); ?></div>
             </div>
         </div>
