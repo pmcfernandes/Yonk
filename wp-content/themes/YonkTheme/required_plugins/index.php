@@ -45,18 +45,6 @@
             ),
 
             array(
-                'name'               => 'Classic Widgets',
-                'slug'               => 'classic-widgets',
-                'source'             => 'https://downloads.wordpress.org/plugin/classic-widgets.0.3.zip',
-                'required'           => true,
-                'version'            => '0.3',
-                'force_activation'   => false,
-                'force_deactivation' => false,
-                'external_url'       => 'https://pt.wordpress.org/plugins/classic-widgets/',
-                'is_callable'        => '',
-            ),
-
-            array(
                 'name'               => 'Classic Editor',
                 'slug'               => 'classic-editor',
                 'source'             => 'https://downloads.wordpress.org/plugin/classic-editor.1.6.2.zip',

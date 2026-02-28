@@ -4,6 +4,10 @@
         exit;
     }
 
+    if (!defined('GOOGLE_MAPS_API_KEY')) {
+        define('GOOGLE_MAPS_API_KEY', '<YOUR_GOOGLE_MAPS_API_KEY>');
+    }
+
     require_once dirname(__FILE__) . '/required_plugins/index.php';
     require_once dirname(__FILE__) . '/shortcodes/qrcode.php';
     require_once dirname(__FILE__) . '/shortcodes/search-overlay.php';
@@ -38,7 +42,7 @@
         wp_register_style('search_overlay', get_template_directory_uri() . '/assets/css/search-overlay.css', array('bootstrap'), '1.2.0');
         wp_register_style('style', get_template_directory_uri() . '/style.css', array(), '1.2.0');
         wp_register_style('style_Yonk', get_stylesheet_directory_uri() . '/assets/css/site.css', array(), '1.2.0');
-        
+
 
         wp_enqueue_style('bootstrap');
         wp_enqueue_style('search_overlay');
@@ -157,3 +161,17 @@
     }
 
     add_action('after_setup_theme', 'Yonk_load_theme_textdomain');
+
+
+    /**
+     * Disable the block editor from managing widgets in the Gutenberg plugin.
+     * Disable the block editor from managing widgets.
+     *
+     * @return void
+     */
+    add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+
+    /**
+     * Disable the block editor from managing widgets.
+     */
+    add_filter( 'use_widgets_block_editor', '__return_false' );
